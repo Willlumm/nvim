@@ -414,7 +414,7 @@ require('lazy').setup({
             pylsp = {
               plugins = {
                 pyflakes = { enabled = false },
-                pycodestyle = { enabled = false },
+                pycodestyle = { enabled = false, maxLineLength = 88 },
                 autopep8 = { enabled = false },
                 yapf = { enabled = false },
                 mccabe = { enabled = false },
