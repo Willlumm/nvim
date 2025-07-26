@@ -66,6 +66,9 @@ vim.o.shellcmdflag = '-c'
 -- Autocomplete with `/` instead of `\`.
 vim.o.shellslash = true
 
+-- Highlight column when line is too long.
+vim.o.colorcolumn = 88
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
