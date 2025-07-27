@@ -1,5 +1,5 @@
 -- https://github.com/nvim-telescope/telescope.nvim
--- Fuzzer finder
+-- Fuzzy finder
 
 return {
     "nvim-telescope/telescope.nvim",
