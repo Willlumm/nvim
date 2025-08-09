@@ -174,6 +174,7 @@ return {
                     },
                 },
             },
+            ruff = {},
         }
         local ensure_installed = vim.tbl_keys(servers or {})
         vim.list_extend(ensure_installed, {
