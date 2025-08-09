@@ -152,6 +152,19 @@ return {
         })
         local capabilities = require("blink.cmp").get_lsp_capabilities()
         local servers = {
+            basedpyright = {
+                settings = {
+                    basedpyright = {
+                        analysis = {
+                            autoSearchPaths = true,
+                            diagnosticMode = "openFilesOnly",
+                            typeCheckingMode = "basic",
+                            useLibraryCodeForTypes = true,
+                        },
+                        disableOrganizeImports = true,
+                    },
+                },
+            },
             lua_ls = {
                 settings = {
                     Lua = {
