@@ -78,6 +78,23 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
 })
 
+local file_patterns = {
+    { "*.lua", "stylua" },
+    { "*.py", "ruff" },
+}
+
+local group = vim.api.nvim_create_augroup("format", { clear = true })
+
+for k, v in pairs(file_patterns) do
+    pattern = v[1]
+    formatter = v[2]
+    vim.api.nvim_create_autocmd("BufWritePost", {
+        group = group,
+        desc = "Format file on write",
+        pattern = pattern,
+        command = "silent !\"" .. formatter .. " '%'\"",
+    })
+end
 -- Configure and install plugins
 require("config")
 require("nvim-treesitter.install").compilers = { "zig" }
