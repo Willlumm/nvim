@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 local file_patterns = {
     { "*.lua", "stylua" },
-    { "*.py", "ruff" },
+    { "*.py", "ruff format" },
 }
 
 local group = vim.api.nvim_create_augroup("format", { clear = true })
