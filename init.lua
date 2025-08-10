@@ -17,20 +17,20 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 local file_patterns = {
-    { "*.lua", "stylua" },
-    { "*.py", "ruff format" },
+    { "*.lua", "stylua '%'" },
+    { "*.py", "ruff check '%' --fix-only & ruff format '%'" },
 }
 
 local group = vim.api.nvim_create_augroup("format", { clear = true })
 
 for k, v in pairs(file_patterns) do
     pattern = v[1]
-    formatter = v[2]
+    command = v[2]
     vim.api.nvim_create_autocmd("BufWritePost", {
         group = group,
         desc = "Format file on write",
         pattern = pattern,
-        command = "silent !\"" .. formatter .. " '%'\"",
+        command = "silent !\"" .. command .. " \"",
     })
 end
 
