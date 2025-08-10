@@ -1,3 +1,5 @@
+-- https://docs.basedpyright.com/latest/configuration/language-server-settings/
+
 return {
     cmd = { "basedpyright-langserver", "--stdio" },
     filetypes = { "python" },
@@ -17,6 +19,7 @@ return {
                 useLibraryCodeForTypes = true,
                 diagnosticMode = "openFilesOnly",
             },
+            disableOrganizeImports = true,
         },
     },
 }
