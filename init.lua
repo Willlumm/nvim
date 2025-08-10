@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 local file_patterns = {
     { "*.lua", "stylua '%'" },
-    { "*.py", "ruff check '%' --fix-only & ruff format '%'" },
+    { "*.py", "ruff check '%' --fix-only && ruff format '%'" },
 }
 
 local group = vim.api.nvim_create_augroup("format", { clear = true })
@@ -30,7 +30,7 @@ for k, v in pairs(file_patterns) do
         group = group,
         desc = "Format file on write",
         pattern = pattern,
-        command = "silent !\"" .. command .. " \"",
+        command = "silent !\"" .. command .. "\"",
     })
 end
 
