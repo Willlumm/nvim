@@ -16,8 +16,6 @@ return {
         basedpyright = {
             analysis = {
                 autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
-                diagnosticMode = "openFilesOnly",
                 typeCheckingMode = "off",
             },
             disableOrganizeImports = true,
