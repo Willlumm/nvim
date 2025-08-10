@@ -5,6 +5,8 @@ vim.g.have_nerd_font = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.lsps = { "lua-language-server" }
+
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",

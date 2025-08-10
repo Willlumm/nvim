@@ -1,4 +1,4 @@
-vim.lsp.enable({ "lua_ls" })
+vim.lsp.enable(vim.g.lsps)
 
 vim.diagnostic.config({
     severity_sort = true,

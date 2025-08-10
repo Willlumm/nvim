@@ -1,6 +1,8 @@
 -- -- https://github.com/neovim/nvim-lspconfig
 -- -- Language Server Protocols (LSP)
---
+
+return {}
+
 -- return {
 --     "neovim/nvim-lspconfig",
 --     dependencies = {
