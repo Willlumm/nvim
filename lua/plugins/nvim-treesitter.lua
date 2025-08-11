@@ -19,6 +19,7 @@ return {
             "vim",
             "vimdoc",
         },
+        ignore_install = { "csv" },
         auto_install = true,
         highlight = {
             enable = true,
