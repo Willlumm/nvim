@@ -39,4 +39,4 @@ require("config.lazy")
 require("config.lsp")
 require("config.keymaps")
 
-require("nvim-treesitter.install").compilers = { "zig" }
+require("nvim-treesitter.install").compilers = { "zig", "clang" }
